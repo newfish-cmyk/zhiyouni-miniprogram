@@ -1,0 +1,5 @@
+<view class="pic">
+<image src="/image/tree.png" ></image>
+</view>
+<button class="button" bindtap="login" type = "primary">微信一键登录</button>
+<button class="button" bindtap="guest" >游客模式访问</button>

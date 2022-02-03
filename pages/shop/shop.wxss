@@ -1,0 +1,46 @@
+.container1{
+  height: 150px;
+}
+
+.item{
+  height:100%;
+  line-height: 150px;
+  text-align: center;
+}
+
+swiper-item:nth-child(1) .item{
+  background-color: lightgreen;
+}
+swiper-item:nth-child(2) .item{
+  background-color: lightskyblue;
+}
+swiper-item:nth-child(3) .item{
+  background-color: lightpink;
+}
+
+.category{
+  display: flex;
+  flex-wrap: wrap;  
+  justify-content: center; 
+}
+
+.category_item{
+  background-color: gray;
+  margin: 23rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 20%;
+}
+
+.category_title{
+  font-size:15px;
+  display: flex;  
+  justify-content: center; 
+}
+
+.category_image{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; 
+}

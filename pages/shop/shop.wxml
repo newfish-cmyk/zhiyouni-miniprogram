@@ -1,0 +1,47 @@
+<!-- 轮播图 -->
+<swiper class="container1" indicator-dots="true" indicator-color="white" indicator-active-color="grey" autoplay interval="5000" circular>
+  <swiper-item>
+    <view class="item">A</view>
+  </swiper-item>
+  <swiper-item>
+    <view class="item">B</view>
+  </swiper-item>
+  <swiper-item>
+    <view class="item">C</view>
+  </swiper-item>
+</swiper>
+<!-- 九宫格区域 -->
+<view class="category">
+<view class="category_item" bindtap="click1">
+<image class="category_image" src="/image/10多肉.png"></image>
+<text class="category_title">分类1</text>
+</view>
+<view class="category_item" bindtap="click2">
+<image class="category_image" src="/image/11多肉.png"></image>
+<text class="category_title">分类2</text>
+</view>
+<view class="category_item" bindtap="click3">
+<image class="category_image" src="/image/05多肉.png"></image>
+<text class="category_title">分类3</text>
+</view>
+<view class="category_item" bindtap="click4">
+<image class="category_image" src="/image/17多肉.png"></image>
+<text class="category_title">分类4</text>
+</view>
+<view class="category_item" bindtap="click5">
+<image class="category_image" src="/image/16多肉.png"></image>
+<text class="category_title">分类5</text>
+</view>
+<view class="category_item" bindtap="click6">
+<image class="category_image" src="/image/02多肉.png"></image>
+<text class="category_title">分类6</text>
+</view>
+<view class="category_item" bindtap="click7">
+<image class="category_image" src="/image/14多肉.png"></image>
+<text class="category_title">分类7</text>
+</view>
+<view class="category_item" bindtap="click8">
+<image class="category_image" src="/image/15多肉.png"></image>
+<text class="category_title">分类8</text>
+</view>
+</view>

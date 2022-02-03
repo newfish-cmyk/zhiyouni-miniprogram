@@ -1,0 +1,12 @@
+.pic{
+  margin-top: 180rpx;
+  display: flex;
+  justify-content: center; 
+}
+.pic image{
+  width: 400rpx;
+  height: 400rpx;
+}
+.button{
+  margin-top: 80rpx;
+}

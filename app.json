@@ -1,0 +1,63 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/logs/logs",
+    "pages/home/home",
+    "pages/shop/shop",
+    "pages/my/message/message",
+    "pages/my/my",
+    "pages/shop/category/category1/category1",
+    "pages/shop/category/category2/category2",
+    "pages/shop/category/category3/category3",
+    "pages/shop/category/category4/category4",
+    "pages/shop/category/category5/category5",
+    "pages/shop/category/category6/category6",
+    "pages/shop/category/category7/category7",
+    "pages/shop/category/category8/category8",
+    "pages/zhishi/zhishi",
+    "pages/my/cart/cart",
+    "pages/my/appointment/appointment",
+    "pages/my/plant/plant",
+    "pages/my/note/note",
+    "pages/my/star/star"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#9BD1AB",
+    "selectedColor": "#54ABAB",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "image/tree2.png",
+        "iconPath": "image/tree1.png",
+        "pagePath": "pages/zhishi/zhishi",
+        "text": "植识"
+      },
+      {
+        "selectedIconPath": "image/home2.png",
+        "iconPath": "image/home1.png",
+        "pagePath": "pages/home/home",
+        "text": "广场"
+      },
+      {
+        "selectedIconPath": "image/shop2.png",
+        "iconPath": "image/shop1.png",
+        "pagePath": "pages/shop/shop",
+        "text": "商城"
+      },
+      {
+        "selectedIconPath": "image/my2.png",
+        "iconPath": "image/my1.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  }
+}

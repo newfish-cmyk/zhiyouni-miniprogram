@@ -1,1 +1,78 @@
-message
+<!-- 搜索框 -->
+<view class="input">
+  <input class="input_item" placeholder="搜索用户名"></input>
+  <image src="/image/search.png"></image>
+</view>
+<!-- 顶部导航栏 -->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+<swiper class="swiper" current="{{currentTab}}" bindchange="swiperChange">
+<!-- 评论和@ -->
+  <swiper-item>
+    <scroll-view class="scroll" scroll-y="true">
+      <view class="message_one">
+        <view class="upper">
+          <view class="left">
+            <image src="/image/tree.png"></image>
+          </view>
+          <view class="right">
+          <!-- 昵称 -->
+            <view class="name">
+            <text>小植同学</text>
+            </view>
+          <!-- 发布时间 -->
+            <view class="time">
+              <text>2022/2/9  13:07</text>
+            </view>
+          </view>
+        </view>
+        <view class="middle">快转了这条消息</view>
+        <view class="under">
+            <view class="right_cite">
+              <view class="text">@小丸子</view>
+              <view class="text">蜡笔小新，超级美</view>
+            </view>
+            <view class="left_cite">
+              <image src="/image/blank.jpg"></image>
+            </view>
+        </view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+<!-- 新增关注 -->
+  <swiper-item>
+    <scroll-view class="scroll" scroll-y="true">
+      
+    </scroll-view>
+  </swiper-item>
+<!-- 赞和收藏 -->
+  <swiper-item>
+    <scroll-view class="scroll" scroll-y="true">
+      
+    </scroll-view>
+  </swiper-item>
+<!-- 系统消息 -->
+  <swiper-item>
+    <scroll-view class="scroll" scroll-y="true">
+      <view class="message_one">
+        <view class="upper">
+          <view class="left">
+            <image src="/image/tree.png"></image>
+          </view>
+          <view class="right">
+          <!-- 昵称 -->
+            <view class="name">
+            <text>小植同学</text>
+            </view>
+          <!-- 发布时间 -->
+            <view class="time">
+              <text>2022/2/10  9:49</text>
+            </view>
+          </view>
+        </view>
+        <view class="system">该版本为测试版</view>
+      </view>
+    </scroll-view>
+  </swiper-item>
+</swiper>

@@ -1,0 +1,36 @@
+<!-- 图片 -->
+<swiper class="rotation" indicator-dots="true" indicator-color="lightgrey" indicator-active-color="grey" circular>
+<swiper-item>
+  <view class="rotation_item"><image src="{{detail.photo[0]}}"></image></view>
+</swiper-item>
+<swiper-item>
+  <view class="rotation_item"><image src="{{detail.photo[1]}}"></image></view>
+</swiper-item>
+<swiper-item>
+  <view class="rotation_item"><image src="{{detail.photo[2]}}"></image></view>
+</swiper-item> 
+</swiper>
+<scroll-view scroll-y="true" class="scroll">
+<!-- 信息 -->
+<view class="v2"></view>
+<view class="information">
+<view class="information_item">
+  <text class="front">名称</text>
+  <text>{{detail.name}}</text>
+</view>
+<view class="information_item">
+  <text class="front">价格</text>
+  <text>{{detail.value}}</text>
+</view>
+<view class="information_item">
+  <text class="front">商品简介</text>
+  <text user-select="true">{{detail.intro}}</text>
+</view>
+</view>
+</scroll-view>
+<!-- 底部栏 -->
+<view class="bottom">
+  <view class="buy" bindtap="add">
+  <text>加入购物车</text>
+  </view>
+</view>

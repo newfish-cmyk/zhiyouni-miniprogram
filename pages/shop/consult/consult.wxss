@@ -1,0 +1,97 @@
+page{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.scroll{
+  background: -webkit-linear-gradient(bottom,#caded9,white);
+  height: 100%;
+  /* background-color: #caded9; */
+}
+
+.input{
+  height: 60rpx;
+  width: 100%;
+  display: flex;
+  top:0;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10rpx;
+  padding-top: 10rpx;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  /* border: solid 1px black; */
+}
+
+.v1{
+  height: 80rpx;
+}
+
+.input .input_item{
+  /* margin-left: 8%; */
+  width: 60%;
+  border: 1px solid #bfbfbf;
+  border-radius: 10px;
+  padding-left: 10px;
+  /* background-color: #b6d3ba; */
+}
+
+.input image{
+  margin-left: 30rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.center{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.06);
+}
+
+.expert{
+  height: 200rpx;
+  width: 80%;
+  /* margin-left: auto; */
+  /* border-bottom: 2px solid gray; */
+  display: flex;
+  margin-top: 10rpx;
+  margin-bottom: 10rpx;
+}
+
+.expert .left{
+  width: 25%;
+  height: 100%;
+  margin-right: 20rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.expert .left image{
+  width: 130rpx;
+  height: 130rpx;
+  border-radius: 10%;
+}
+
+.expert .right{
+  width: 70%;
+  height: 100%;
+  /* margin-right: 20rpx; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.expert .right .name{
+  font-size: 18px;
+  color: #93C4B0;
+  margin-bottom: 5rpx;
+}
+
+.expert .right .brief{
+  font-size: 13px;
+  color: #93C4B0;
+}

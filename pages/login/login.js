@@ -8,7 +8,7 @@ Page({
     let user = wx.getStorageSync('user')
     if(user){
       wx.switchTab({
-        url: '../my/my',
+        url: '../zhishi/zhishi',
       })
     }
   },
@@ -29,6 +29,8 @@ Page({
           complete:res=>{
             const db = wx.cloud.database()
             // console.log("id",res)
+            let openid = res.result.openid
+            wx.setStorageSync('openid', openid)
             db.collection("user").where({
               _openid:res.result.openid   //进行筛选
             }).get({
@@ -83,7 +85,7 @@ Page({
         })
         //跳转页面
         wx.switchTab({
-          url: '../home/home',
+          url: '../zhishi/zhishi',
         })
       },
       fail:(res)=>{
@@ -93,7 +95,7 @@ Page({
   },
   guest(){
       wx.switchTab({
-        url: '../home/home',
+        url: '../zhishi/zhishi',
       })
   }
 })

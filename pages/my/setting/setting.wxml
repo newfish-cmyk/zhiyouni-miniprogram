@@ -1,0 +1,2 @@
+<button open-type="feedback">反馈与建议</button>
+<button bindtap="logout">退出登录</button>

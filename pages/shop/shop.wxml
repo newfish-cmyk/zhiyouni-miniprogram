@@ -1,47 +1,138 @@
+<!-- 顶部导航栏 -->
+<view class="navbar">
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" bindtap="navbarTap">{{item}}</text>
+</view>
+<swiper class="swiper" current="{{currentTab}}" bindchange="swiperChange">
+
+<!-- 植物商城 -->
+<swiper-item>
+<scroll-view class="scroll" scroll-y="true">
+
 <!-- 轮播图 -->
-<swiper class="container1" indicator-dots="true" indicator-color="white" indicator-active-color="grey" autoplay interval="5000" circular>
+<swiper class="rotation" indicator-dots="true" indicator-color="white" indicator-active-color="grey" autoplay interval="8000" circular>
   <swiper-item>
-    <view class="item">A</view>
+    <view class="rotation_item">
+      <image src="{{swiper_image[0]}}"></image>
+    </view>
   </swiper-item>
   <swiper-item>
-    <view class="item">B</view>
+    <view class="rotation_item">
+      <image src="{{swiper_image[1]}}"></image>
+    </view>
   </swiper-item>
   <swiper-item>
-    <view class="item">C</view>
+    <view class="rotation_item">
+      <image src="{{swiper_image[2]}}"></image>
+    </view>
   </swiper-item>
 </swiper>
+<!-- 搜索框 -->
+<view class="input">
+<input class="input_item"></input>
+<image src="/image/search.png"></image>
+</view>
 <!-- 九宫格区域 -->
+<view class="title">
+<text>今日必抢</text>
+</view>
 <view class="category">
 <view class="category_item" bindtap="click1">
-<image class="category_image" src="/image/10多肉.png"></image>
+<image class="category_image" src="{{category_image[0]}}"></image>
 <text class="category_title">分类1</text>
 </view>
 <view class="category_item" bindtap="click2">
-<image class="category_image" src="/image/11多肉.png"></image>
+<image class="category_image" src="{{category_image[1]}}"></image>
 <text class="category_title">分类2</text>
 </view>
 <view class="category_item" bindtap="click3">
-<image class="category_image" src="/image/05多肉.png"></image>
+<image class="category_image" src="{{category_image[2]}}"></image>
 <text class="category_title">分类3</text>
 </view>
 <view class="category_item" bindtap="click4">
-<image class="category_image" src="/image/17多肉.png"></image>
+<image class="category_image" src="{{category_image[3]}}"></image>
 <text class="category_title">分类4</text>
 </view>
 <view class="category_item" bindtap="click5">
-<image class="category_image" src="/image/16多肉.png"></image>
+<image class="category_image" src="{{category_image[4]}}"></image>
 <text class="category_title">分类5</text>
 </view>
 <view class="category_item" bindtap="click6">
-<image class="category_image" src="/image/02多肉.png"></image>
+<image class="category_image" src="{{category_image[5]}}"></image>
 <text class="category_title">分类6</text>
 </view>
 <view class="category_item" bindtap="click7">
-<image class="category_image" src="/image/14多肉.png"></image>
+<image class="category_image" src="{{category_image[6]}}"></image>
 <text class="category_title">分类7</text>
 </view>
 <view class="category_item" bindtap="click8">
-<image class="category_image" src="/image/15多肉.png"></image>
+<image class="category_image" src="{{category_image[7]}}"></image>
 <text class="category_title">分类8</text>
 </view>
+<view class="v1"></view>
 </view>
+<!-- 推荐商品 -->
+<view class="title">
+<text class="title_goods">优选好物</text>
+</view>
+
+<view class="goods">
+  <block wx:for="{{goods}}" wx:key="index">
+  <view class="goods_item" bindtap="goDetail" data-item="{{item}}">
+    <image class="goods_photo" src="{{item.photo[0]}}"></image>
+    <text>{{item.name}}</text>
+  </view>
+  </block>
+</view>
+</scroll-view>
+</swiper-item>
+
+<!-- 专家预约 -->
+<swiper-item>
+  <scroll-view class="scroll" scroll-y="true">
+    <view class="expert">
+    <!-- 专家咨询 -->
+    <view class="expert_item">
+      <view class="top">
+        <view class="title">专家咨询</view>  
+        <view class="enter" ><image src="/image/arrow-right.png" bindtap="goConsult"></image></view>
+      </view>
+      <view class="bottom">
+        <view class="expert_one">
+          <view class="left"><image src="/image/blank.jpg"></image></view>
+          <view class="right">
+            <view class="name">李医生</view>
+            <view class="intro">权威植物医生</view>
+            <view class="star">★★★★★</view>
+          </view>
+        </view>
+      </view>
+      <view class="bottom">
+        <view class="expert_one">
+          <view class="left"><image src="/image/blank.jpg"></image></view>
+          <view class="right">
+            <view class="name">张医生</view>
+            <view class="intro">权威植物医生</view>
+            <view class="star">★★★★★</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- 上门养护 -->
+    <view class="expert_item">
+      <view class="top">
+        <view class="title">上门养护</view>  
+        <view class="enter" ><image src="/image/arrow-right.png"></image></view>
+      </view>
+      <view class="content">暂无此功能</view>
+    </view>
+    </view>
+  </scroll-view>
+</swiper-item>
+
+<!-- 爱心助农 -->
+<swiper-item>
+  <scroll-view class="scroll" scroll-y="true">
+    <text></text>
+  </scroll-view>
+</swiper-item>
+</swiper>

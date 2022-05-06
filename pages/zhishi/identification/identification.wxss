@@ -1,0 +1,17 @@
+/* pages/identification/identification.wxss */
+.img {
+  margin: 10%;
+  border-radius: 30rpx;
+}
+.img image {
+  width: 100%;
+  border-radius: 30rpx;
+}
+.result {
+  margin: 8%;
+  display: flex;
+}
+.result-text {
+  padding-left: 5%;
+  padding-bottom: 5%;
+}

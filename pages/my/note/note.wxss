@@ -1,1 +1,88 @@
-/* pages/my/note/note.wxss */
+.note{
+  display: flex;
+  border-radius: 30px;
+  border-bottom: 1px solid lightgray;
+  padding: 20rpx 20rpx 40rpx 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.note .left{
+  width: 120rpx;
+  margin-right: 15rpx;
+}
+
+.note .left image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 10%;
+}
+
+.right .name text{
+  font-size: 18px;
+  color: #93C4B0;
+  font-weight: 550;
+}
+
+.right .content .text{
+  font-size: 16px;
+  white-space:pre-wrap;
+  /* width: 100%; */
+  word-break: break-all;
+}
+
+.right .time{
+  display: flex;
+}
+
+.right .time text{
+  font-size: 13px;
+  color: #7f7f7f;
+}
+
+.right .time .delete{
+  font-size: 13px;
+  color: #93C4B0;
+  margin-left: 20rpx;
+}
+
+.bottom{
+  height: 150rpx;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  right: 0;
+  /* justify-content: center; */
+}
+
+.bottom .write{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+
+.bottom .write image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+}
+
+.image_wrap{
+  margin-top: 10rpx;
+}
+
+.image_wrap .image_1{
+  height: 320rpx;
+  width: 480rpx;
+}
+
+.image_wrap .image_2{
+  height: 160rpx;
+  width: 160rpx;
+  margin-right: 6rpx;
+}
+
+.image_wrap .image_4{
+  height: 240rpx;
+  width: 240rpx;
+  margin-right: 6rpx;
+}

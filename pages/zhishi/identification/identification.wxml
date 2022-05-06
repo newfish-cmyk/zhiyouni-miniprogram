@@ -1,0 +1,16 @@
+<!--pages/identification/identification.wxml-->
+<view class="img">
+  <image src="{{imageUrl}}" mode="widthFix"></image>
+</view>
+<view class="onekey">
+  <button bindtap="onekey_identify" type="default">一键识图</button>
+</view>
+<view class="result" wx:if="{{onekey_click}}">
+  <icon type="success"></icon>
+  <view class="result-text">
+    <text>识别结果共{{resultdata.length}}种：</text>
+    <view class="result-item" wx:for="{{resultdata}}" wx:key="name">
+      <text>名称：{{item.name}}</text>
+    </view>
+  </view>
+</view>

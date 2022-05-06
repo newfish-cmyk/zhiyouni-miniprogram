@@ -1,2 +1,18 @@
-<!--pages/my/appointment/appointment.wxml-->
-<text>pages/my/appointment/appointment.wxml</text>
+<scroll-view scroll-y="true" class="scroll">
+  <view class="list">
+  <block wx:for="{{appointment}}" wx:key="index">
+    <view data-index='{{index}}' class='appointment {{item.active?"touchmove":""}}' bindtouchstart="touchstart" bindtouchmove="touchmove">
+    <view class="visiable">
+      <view class="left"><image src="{{item.avatar}}"></image></view>
+      <view class="right">
+        <view class="name">{{item.name}}</view>
+        <view class="date">{{item.dates}}</view>
+        <view class="date">{{item.times}}</view>
+      </view>
+    </view>
+    <view class="delete" bindtap="delete" data-index='{{index}}'>删除</view>
+    </view>
+  </block>
+  </view>
+<view class="v1"></view>
+</scroll-view>

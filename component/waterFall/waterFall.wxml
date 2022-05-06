@@ -1,0 +1,18 @@
+<!--component/waterFall/waterFall.wxml-->
+<view class="background">
+  <view class="waterfall">
+  <view class="left" id="leftfall">
+    <view class="img-item" wx:for="{{ leftfall }}" wx:key="id" bindtap="godetail" data-item="{{item}}">
+      <image src="{{ item.photo_url }}" lazy-load="{{ true }}" mode="widthFix" bindload="waterfall"></image>
+      <text class='name'>{{item.name}}</text>
+    </view>
+  </view>
+  <view class="right" id="rightfall">
+    <view class="img-item" wx:for="{{ rightfall }}" wx:key="id" bindtap="godetail" data-item="{{item}}">
+      <image src="{{ item.photo_url }}" lazy-load="{{ true }}" mode="widthFix" bindload="waterfall"></image>
+      <text class='name'>{{item.name}}</text>
+    </view>
+  </view>
+</view>
+</view>
+

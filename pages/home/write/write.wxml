@@ -1,0 +1,22 @@
+<view class="content">
+  <!-- 文本输入框 -->
+  <textarea placeholder="请输入你的笔记..." class="note" maxlength="2000" bindinput="write" user-select="true">
+  </textarea>
+</view>
+<view class="img_wrap">
+  <block wx:for="{{tempFilePaths_show}}" wx:key="index" >
+  <view class="one-img">
+    <image src="{{item}}" class="img_choose"></image>
+    <image src="/image/delete.png" class="img_del" bindtap="delete" data-index="{{index}}"></image>
+  </view>
+  </block>
+  <view class="one-img" bindtap="choose_img">
+    <image src="/image/add.png" class="img_choose"></image>
+  </view>
+</view>
+
+<view class="bottom">
+<view class="publish" bindtap="publish">
+<text>发布笔记</text>
+</view>
+</view>

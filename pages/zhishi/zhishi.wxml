@@ -1,2 +1,8 @@
-<!--pages/zhishi/zhishi.wxml-->
-<text>zhishi</text>
+<search bind:gotoSearch="gotoSearch" class="search"></search>
+  <view class="container">
+    <view class="touch" bindtap="goSearch">
+      <view class="tips"><text>一键识图</text></view>
+    </view> 
+    <waterfall name="waterfall" dataFall="{{dataFall}}" class="watarfall"></waterfall>
+  </view>
+

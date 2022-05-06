@@ -1,0 +1,24 @@
+<view class="content">
+  <!-- 名称输入框 -->
+  <view class="name">植物名：</view>
+  <textarea class="note" maxlength="20" bindinput="name" user-select="true">
+  </textarea>
+</view>
+<view class="img_wrap">
+  <view class="plant_img">植物图像：</view>
+  <block wx:for="{{tempFilePaths_show}}" wx:key="index" >
+  <view class="one-img">
+    <image src="{{item}}" class="img_choose"></image>
+    <image src="/image/delete.png" class="img_del" bindtap="delete" data-index="{{index}}"></image>
+  </view>
+  </block>
+  <view class="one-img" bindtap="choose_img">
+    <image src="/image/add.png" class="img_choose"></image>
+  </view>
+</view>
+
+<view class="bottom">
+<view class="publish" bindtap="publish">
+<text>新增植物</text>
+</view>
+</view>

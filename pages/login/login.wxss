@@ -2,11 +2,51 @@
   margin-top: 180rpx;
   display: flex;
   justify-content: center; 
+  margin-bottom: 40rpx;
 }
+
 .pic image{
-  width: 400rpx;
-  height: 400rpx;
+  width: 376rpx;
+  height: 256rpx;
 }
+
+.title{
+  display: flex;
+  justify-content: center;
+  font-size: 22px;
+  color: #8fc3ad;
+}
+
+.buttonList{
+  display: flex;
+  justify-content: center;
+  margin-top: 60rpx;
+}
+
+.center{
+  display: flex;
+  flex-direction: column;
+}
+
 .button{
-  margin-top: 80rpx;
+  margin-top: 60rpx;
+  /* border: 2px solid black; */
+  height: 80rpx;
+  width: 300rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 30px;
+  background: linear-gradient(to right,#97bbbe,#afcac1);
+}
+
+.button .view{
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  color: white;
+}
+
+page{
+  background: -webkit-linear-gradient(bottom,#93C4B0,white);
 }

@@ -1,1 +1,62 @@
-home
+<scroll-view class="scroll" scroll-y="true">
+<!-- 活动轮播图 -->
+<swiper class="rotation" indicator-dots="false" autoplay interval="8000" circular>
+  <swiper-item>
+    <view class="rotation_item" bindtap="godetail1">
+      <view>1</view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="rotation_item" bindtap="godetail2">
+      <view>2</view>
+    </view>
+  </swiper-item>
+  <swiper-item>
+    <view class="rotation_item" bindtap="godetail3">
+      <view>3</view>
+    </view>
+  </swiper-item>
+</swiper>
+<!-- 单条动态 -->
+<block wx:for="{{noteList}}" wx:key="index">
+  <!-- 单条内容 -->
+  <view class="note">
+    <view class="left">
+      <image src="{{item.avatar}}"></image>
+    </view>
+    <view class="right">
+      <view class="name">
+      <text>{{item.nickName}}</text>
+      </view>
+      <view class="content">
+      <view class="text">{{item.text}}</view>
+      <!-- 图片 -->
+      <view class="image_wrap">
+      <block wx:if="{{item.image.length == 1}}" wx:for="{{item.image}}" wx:for-item="imgItem" wx:key="index">
+        <image src="{{imgItem}}" class="image_1"></image>
+      </block>
+      <!-- 2~3张图布局 -->
+      <block wx:if="{{item.image.length == 2||item.image.length == 3||item.image.length > 4}}" wx:for="{{item.image}}" wx:for-item="imgItem" wx:key="index">
+        <image src="{{imgItem}}" class="image_2"></image>
+      </block>
+      <!-- 4张图布局 -->
+      <block wx:if="{{item.image.length == 4}}" wx:for="{{item.image}}" wx:for-item="imgItem" wx:key="index">
+        <image src="{{imgItem}}" class="image_4"></image>
+      </block>
+      </view>
+    <!-- 发布时间 -->
+      <view class="time">
+        <text>{{item.time}}</text>
+        <view class="delete" wx:if="{{myopenid ==item._openid}}" bindtap="delete" data-id="{{item._id}}">删除</view>
+      </view>
+    </view>
+  </view>
+  </view>
+</block>
+<!-- 底部发表按钮 -->
+  <view class="bottom">
+    <view class="write" bindtap="write">
+      <image src="/image/write.png"></image>
+    </view>
+  </view>
+</scroll-view>

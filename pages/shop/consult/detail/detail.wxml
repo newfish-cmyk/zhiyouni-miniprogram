@@ -1,0 +1,54 @@
+
+<scroll-view scroll-y="true" class="scroll">
+<!-- 图片 -->
+<view class="photo"><image src="{{detail.photo}}"></image></view>
+<!-- 信息 -->
+<view class="information">
+<view class="information_item">
+  <view class="front">姓名</view>
+  <text>{{detail.name}}</text>
+</view>
+<view class="information_item">
+  <text class="front">评分</text>
+  <text>{{detail.star}}</text>
+</view>
+<view class="information_item">
+  <text class="front">简介</text>
+  <text user-select="true">{{detail.intro}}</text>
+</view>
+</view>
+
+<!-- 选择时间
+<view class="date">
+</view> -->
+<!-- <view class="v1"></view> -->
+</scroll-view>
+<!-- 底部预约 -->
+<view class="bottom_center" bindtap="appoint">
+<view class="bottom">
+  <view class="appoint">预约专家</view>
+</view>
+</view>
+<view class='mask' hidden='{{mask}}' bindtap="exit"></view>
+<view class='realappoint' hidden='{{mask}}'>
+  <view class="section">  
+    <picker mode="date" value="{{detail.date}}" start="2022-01-01" end="2023-12-31" bindchange="bindDateChange">  
+      <view class="picker">  
+        日期: {{detail.dates}}  
+      </view>  
+    </picker>  
+  </view> 
+  <view class="section">  
+    <picker mode="time" value="{{detail.times}}" start="00:00" end="23:59" bindchange="bindTimeChange">  
+      <view class="picker">  
+      时间 : {{detail.times}}
+      </view>  
+    </picker>  
+  </view> 
+  <!-- 确认预约按钮 -->
+  <view class="bottom_center">
+  <view class="confirm" bindtap="confirm">
+    <view class="center">确认预约</view>
+  </view>
+  </view>
+</view>

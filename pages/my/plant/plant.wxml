@@ -1,2 +1,43 @@
-<!--pages/my/plant/plant.wxml-->
-<text>pages/my/plant/plant.wxml</text>
+<view class="top">
+  <view class="weather">
+    <view class="temperature">
+      <view class="circle">
+        <view class="center_v">26℃</view>
+      </view>
+        <view class="center_t">temperature</view>
+    </view>
+  </view>
+</view>
+<scroll-view class="scroll" scroll-y="true">
+  <view class="list">
+    <image src="/image/list.png" bindtap="list"></image>
+    <view class='mask' hidden='{{list_show}}' bindtap="exit"></view>
+    <view class="add" hidden="{{list_show}}" bindtap="add"><text>新增植物</text></view>
+    <view class="show_delete" hidden="{{list_show}}" bindtap="show_delete">删除植物</view>
+  </view>
+  <view class="v1"></view>
+<block wx:for="{{plantList}}" wx:key="index">
+  <view class="plant_all">
+    <view class="back"></view>
+    <view class="plant_one">
+      <view class="left">
+        <view class="name_wrap">
+          <image src="/image/2circle.png"></image>
+          <view class="name">{{item.name}}</view>
+        </view>
+        <view class="condition">状态记录：良好 记得浇水</view>
+        <view class="date"> 状态时间： {{item.time}}</view>
+      </view>
+      <view class="right">
+        <view class="photo">
+          <image src="{{item.image[0]}}"></image>
+        </view>
+        <view class="jump">
+          <view class="delete" wx:if="{{myopenid ==item._openid}}" bindtap="delete" data-id="{{item._id}}" hidden="{{delete_show}}">删除</view>
+          <image src="/image/arrow-right.png" bindtap="godetail" data-item="{{item}}"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+</block>
+</scroll-view>

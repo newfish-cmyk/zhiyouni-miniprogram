@@ -1,0 +1,79 @@
+<view class="calendar">
+  <view class="top">
+    <view class="date">{{Month}}月{{Day}}日</view>
+  </view>
+  <view class="body">
+    <view class="week">
+      <view class="view">日</view>
+      <view class="view">一</view>
+      <view class="view">二</view>
+      <view class="view">三</view>
+      <view class="view">四</view>
+      <view class="view">五</view>
+      <view class="view">六</view>
+  	</view>
+    <view class="main">
+      <view class="day_gray" wx:for="{{graydateList_1}}" wx:key="index">
+				{{item}}
+			</view>
+		  <view class="day_black" wx:for="{{blackdateList}}" wx:key="index">
+				{{item}}
+			</view>
+      <view class="day_gray" wx:for="{{graydateList_2}}" wx:key="index">
+				{{item}}
+			</view>
+		</view>
+	  </view>
+</view>
+
+  
+<!-- 植物日志 -->
+<view class="bottom">
+  <view class="title">植物日志</view>
+  <view class="choose">
+    <view class="choose_item">
+      <view class="text">日照时间</view>
+      <view class="text">  
+        <picker bindchange="bindSunTimeChange" value="{{index_sun}}" range="{{sun_time}}">
+            <view class="picker">
+              {{sun_time[index_sun]}}
+            </view>
+        </picker>  
+      </view> 
+    <view class="text">+</view>
+    </view>
+    <view class="choose_item">  
+      <text class="text" decode="{{true}}">浇水量&nbsp;&nbsp;</text>
+      <view class="text">  
+        <picker bindchange="bindWaterChange" value="{{index_water}}" range="{{water}}">
+            <view class="picker">
+              {{water[index_water]}}
+            </view>
+        </picker>  
+      </view> 
+      <view class="text">+</view>
+    </view>
+    <view class="choose_item">  
+      <text class="text" decode="{{true}}">室温&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <view class="text">  
+        <picker bindchange="bindTemperatureChange" value="{{index_temper}}" range="{{temperature}}">
+            <view class="picker">
+              {{temperature[index_temper]}}
+            </view>
+        </picker>  
+      </view> 
+      <view class="text">+</view>
+    </view>
+    <view class="choose_item">
+      <text class="text" decode="{{true}}">病变&nbsp;&nbsp;&nbsp;&nbsp;</text>
+      <view class="text">  
+        <picker bindchange="bindDiseaseChange" value="{{index_disease}}" range="{{disease}}">
+            <view class="picker">
+              {{disease[index_disease]}}
+            </view>
+        </picker>  
+      </view> 
+      <view class="text">+</view>
+    </view>
+  </view>
+</view>

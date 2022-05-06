@@ -57,9 +57,14 @@
 }
 
 .second .second_item .shuiping image{
-  width: 100rpx;
-  height: 100rpx;
-  margin: 15rpx;
+  width: 150rpx;
+  height: 150rpx;
+  /* margin: 15rpx; */
+}
+
+.second .second_item .shuiping text{
+  font-size: 15px;
+  margin-left: 15rpx;
 }
 
 .bottom{
@@ -83,9 +88,13 @@
   width: 100rpx;
   height: 100rpx;
   margin: 20rpx;
+  margin-left: 50rpx;
+  border-radius: 15%;
 }
 
 .bottom .bottom_item text{
   font-size: 17px;
   margin: 24px;
+  margin-left: 10rpx;
+  color: #9859A0;
 }

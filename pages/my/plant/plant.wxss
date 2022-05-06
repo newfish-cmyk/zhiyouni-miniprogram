@@ -1,1 +1,209 @@
-/* pages/my/plant/plant.wxss */
+page{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.scroll{
+  background: -webkit-linear-gradient(bottom,#93C4B0,white);
+  height: 100%;
+}
+
+.weather{
+  position: fixed;
+  top: 0;
+  height: 360rpx;
+  width: 100%;
+  border-bottom-left-radius: 60px;
+  border-bottom-right-radius: 60px;
+  background-color: #90c198;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  z-index: 5;
+}
+
+.weather .temperature{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.weather .temperature .circle{
+  border-radius: 50%;
+  height: 280rpx;
+  width: 280rpx;
+  border: white 2px solid;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.weather .temperature .center_v{
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 500;
+  color: white;
+}
+
+.weather .temperature .center_t{
+  display: flex;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 500;
+  color: white;
+}
+
+.list image{
+  width: 60rpx;
+  height: 60rpx;
+  z-index: 10;
+  position: fixed;
+  top: 10rpx;
+  right: 30rpx;
+}
+
+.list .add{
+  width: 150rpx;
+  height: 50rpx;
+  z-index: 10;
+  position: fixed;
+  top: 70rpx;
+  right: 30rpx;
+  background-color: white;
+  border-radius: 5px;
+  padding:5rpx 5rpx;
+  text-align: center;
+}
+
+.list .show_delete{
+  width: 150rpx;
+  height: 50rpx;
+  z-index: 10;
+  position: fixed;
+  top: 120rpx;
+  right: 30rpx;
+  background-color: white;
+  border-radius: 5px;
+  padding:5rpx 5rpx;
+  text-align: center;
+}
+
+.delete{
+  font-size: 16px;
+  color: red;
+  margin-left: 20rpx;
+}
+
+.v1{
+  width: 100%;
+  height: 360rpx;
+}
+
+.plant_all{
+  /* height: 5000rpx; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.back{
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  height: 40rpx;
+  background-color: #afd1b7;
+  width: 78%;
+  margin: auto;
+  margin-top: 120rpx;
+  
+}
+
+.plant_one{
+  display: flex;
+  justify-content: space-around;
+  background-color: #afd1b7;
+  box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.15);
+  margin: auto;
+  width: 75%;
+  padding: 40rpx 40rpx 40rpx 20rpx;
+  border-radius: 10px;
+}
+
+.plant_one .left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* width: 60%; */
+}
+
+.plant_one .left .name_wrap{
+  display: flex;
+}
+
+.plant_one .left .name_wrap image{
+  height: 21px;
+  width: 36px;
+}
+
+.plant_one .left .name{
+  font-size: 10px;
+  color: white;
+  font-weight: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.plant_one .left .condition{
+  font-size: 11px;
+  background-color: #9799b3;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 5px;
+  display: flex;
+  justify-content: center;
+  font-weight: 30;
+  box-shadow: 4rpx 4rpx 16rpx 0 rgba(0, 0, 0, 0.2);
+}
+
+.plant_one .left .date{
+  font-size: 10px;
+  color: white;
+  font-weight: 20;
+}
+
+.plant_one .right{
+  display: flex;
+  flex-direction: column;
+  /* position: relative; */
+  width: 30%;
+  margin-left: 100rpx;
+}
+
+.plant_one .right .photo image{
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 5%;
+}
+
+.plant_one .right .jump{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.plant_one .right .jump image{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0);
+}

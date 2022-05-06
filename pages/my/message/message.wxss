@@ -1,1 +1,150 @@
-/* pages/message/message.wxss */
+page{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.scroll{
+  background: -webkit-linear-gradient(bottom,#93C4B0,white);
+  height: 100%;
+  margin: auto;
+}
+
+.navbar{
+  flex: none;
+  display: flex;
+  background: #fff;
+  font-size: 27rpx;
+  color: #bbbbbb;
+}
+
+.navbar .item{
+  position: relative;
+  flex: auto;
+  text-align: center;
+  line-height: 70rpx;
+}
+
+.navbar .item.active{
+  color: black;
+}
+
+.navbar .item.active:after{
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5rpx;
+  width: 75rpx;
+  margin: auto;
+  background: #93C4B0;
+}
+
+.swiper{
+  height: 100%;
+}
+
+.input{
+  height: 60rpx;
+  display: flex;
+
+}
+
+.input .input_item{
+  margin-left: 8%;
+  width: 70%;
+  border: 1px solid #bfbfbf;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+
+.input image{
+  margin-left: 30rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.message_one{
+  width: 90%;
+  margin: auto;
+  margin-top: 30rpx;
+  box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  background-color: #dff1eb;
+}
+
+.upper{
+  display: flex;
+  padding: 20rpx 20rpx 20rpx 20rpx;
+}
+
+.upper .left{
+  width: 120rpx;
+  margin-right: 13rpx;
+}
+
+.upper .left image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 10%;
+  /* box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.15); */
+}
+
+.right .name text{
+  font-size: 15px;
+  color: black;
+  font-weight: 450;
+}
+
+.right .time{
+  display: flex;
+}
+
+.right .time text{
+  font-size: 12px;
+  color: #7f7f7f;
+}
+
+.under{
+  display: flex;
+  flex-direction: row-reverse;
+  padding: 20rpx 20rpx 40rpx 40rpx;
+}
+
+.left_cite image{
+  height: 110rpx;
+  width: 110rpx;
+  border-radius: 10%;
+
+}
+
+.right_cite{
+  background-color: #ecf7f3;
+  /* opacity:0.5; */
+  height: 110rpx;
+  width: 90%;
+  margin-left: -50rpx;
+  border-radius: 10px;
+  padding-left: 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right_cite .text{
+  font-size: 12px;
+}
+
+.middle{
+  margin-left: 40rpx;
+  font-size: 13px;
+}
+
+.system{
+  font-size: 20px;
+  margin-left: 100rpx;
+}

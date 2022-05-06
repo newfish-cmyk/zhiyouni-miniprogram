@@ -1,7 +1,8 @@
 // app.js
 App({
-  globaldata:{
-   
+  globalData:{
+   currentTab:0,
+   userInfo: null
   },
 
   onLaunch:function(){

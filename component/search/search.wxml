@@ -1,0 +1,7 @@
+<!--component/search/search.wxml-->
+<view class="my-search-container">
+    <view class="my-search-box" bindtap="searchBoxHandler">
+        <icon type="search" size="14"></icon>
+        <text class="placeholder">搜索</text>
+    </view>
+</view>

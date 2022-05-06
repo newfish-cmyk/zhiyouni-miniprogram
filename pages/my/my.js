@@ -6,6 +6,17 @@ data:{
 },
 onShow(){
   let user = wx.getStorageSync('user')
+    if(!user){
+      wx.navigateTo({
+        url: '../login/login',
+      success:function(res){
+        wx.showToast({
+          icon:'none',
+          title: '请先登录',
+        })
+      }
+      })
+    }
   let id = wx.getStorageSync('id')
   // console.log(user)
   this.setData({
@@ -13,17 +24,6 @@ onShow(){
     id:id
   })
 },
-// logout(){
-//   this.setData({
-//     userInfo:'',
-//     id:0
-//   })
-//   wx.setStorageSync('user', null)
-//   wx.setStorageSync('id', null)
-//   wx.navigateTo({
-//     url: '../login/login',
-//   })
-// },
 note(){
   wx.navigateTo({
     url: '../my/note/note',
@@ -53,5 +53,11 @@ message(){
   wx.navigateTo({
     url: '../my/message/message',
   })
-}
+},
+setting(){
+  wx.navigateTo({
+    url: '../my/setting/setting',
+  })
+},
+
 })

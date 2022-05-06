@@ -1,66 +1,73 @@
-// pages/my/note/note.js
+// pages/home/home.js
+const util = require("../../../utils/util")
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
+  data:{
+    item:'',
+    myopenid:''
   },
+  onLoad: function(){
+    let openid = wx.getStorageSync('openid')
+    this.setData({
+      myopenid:openid
+    })
+    var that = this
+    wx.cloud.database().collection('note').orderBy('time','desc').where({
+      _openid:openid
+    }).get({
+      success(res){
+        // console.log('获取数据成功',res)
+        //格式化时间
+        var item = res.data
+        for(var l in item){
+          item[l].time = util.formatTime(new Date(item[l].time))
+        }
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+        that.setData({
+          noteList:item
+        })
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  write(){
+    wx.navigateTo({
+      url: '../../home/write/write',
+    })
   },
+  getNotesList(){
+    let openid = wx.getStorageSync('openid')
+    this.setData({
+      myopenid:openid
+    })
+    var that = this
+    wx.cloud.database().collection('note').orderBy('time','desc').where({
+      _openid:openid
+    }).get({
+      success(res){
+        // console.log('获取数据成功',res)
+        //格式化时间
+        var item = res.data
+        for(var l in item){
+          item[l].time = util.formatTime(new Date(item[l].time))
+        }
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+        that.setData({
+          noteList:item
+        })
+      }
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  delete(e){
+    // console.log(e.currentTarget.dataset.id)
+    var that = this;
+    wx.cloud.database().collection('note').doc(e.currentTarget.dataset.id).remove({
+      success(res){
+        // console.log(res)
+        wx.showToast({
+          icon:"none",
+          title: '删除成功！',
+        })
+        that.getNotesList()
+      }
+    })
   }
 })

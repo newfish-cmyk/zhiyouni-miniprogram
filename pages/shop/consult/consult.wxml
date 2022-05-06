@@ -1,0 +1,24 @@
+
+<!-- 专家列表 -->
+<scroll-view class="scroll" scroll-y="true">
+<view class="v1"></view>
+<block wx:for="{{expert}}" wx:key="index">
+<view class="center">
+  <view class="expert" bindtap="goDetail" data-item="{{item}}">
+  <view class="left">
+    <image src="{{item.avatar}}"></image>
+  </view>
+  <view class="right">
+    <view class="name">{{item.name}}</view>
+    <view class="brief">{{item.star}}</view>
+    <view class="brief">{{item.brief}}</view>
+  </view>
+</view>
+</view>
+</block>
+</scroll-view>
+<!-- 搜索框 -->
+<view class="input">
+  <input class="input_item"></input>
+  <image src="/image/search.png"></image>
+</view>

@@ -1,0 +1,136 @@
+
+.photo{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30rpx;
+}
+
+.photo image{
+  width: 90%;
+  height: 400rpx;
+  border-radius: 20px;
+
+}
+
+page{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.scroll{
+  background: -webkit-linear-gradient(bottom,#91c4ae,white);
+  height: 100%;
+}
+
+.information{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.information .information_item{
+  display: flex;
+  margin-left: 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.front{
+  /* border: 1px solid; */
+  box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.15);
+  background-color: #90c4ae;
+  font-size: 15px;
+  width: 30px;
+  border-radius: 10%;
+  margin-right: 20rpx;
+}
+
+.v1{
+  height: 300rpx;
+  width: 100%;
+}
+
+.bottom{
+  width: 40%;
+  height: 60rpx;
+  position: fixed;
+  bottom: 30rpx;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  background-color: #90c4ae;
+  margin-left: auto;
+  box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.15);
+}
+
+.bottom .appoint{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  font-size: 15px;
+}
+
+.bottom_center{
+  display: flex;
+  justify-content: center;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 5;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.realappoint {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 40vh;
+  z-index: 5;
+  background: -webkit-linear-gradient(bottom,#91c4ae,white);
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.realappoint .confirm{
+  width: 60%;
+  height: 100rpx;
+  position: fixed;
+  bottom: 30rpx;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  background-color: #90c4ae;
+  margin-left: auto;
+  box-shadow: 0 0 20rpx rgba(0, 0, 0, 0.15);
+}
+
+.realappoint .confirm .center{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  font-size: 18px;
+}
+
+.realappoint .section{
+  margin-top: 80rpx;
+  /* display: flex;
+  justify-content: center; */
+  margin-left: 20%;
+}
+
+.realappoint .section .picker{
+  font-size: 18px;
+  color: gray;
+}

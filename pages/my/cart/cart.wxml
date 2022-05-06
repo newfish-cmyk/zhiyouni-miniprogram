@@ -1,2 +1,42 @@
-<!--pages/my/cart/cart.wxml-->
-<text>pages/my/cart/cart.wxml</text>
+<scroll-view scroll-y="true" class="scroll">
+  <view class="list">
+  <block wx:for="{{goods}}" wx:key="index">
+    <view data-index='{{index}}' class='goods {{item.active?"touchmove":""}}' bindtouchstart="touchstart" bindtouchmove="touchmove">
+    <view class="visiable">
+      <view class="circle">
+        <icon bindtap="select" data-index='{{index}}' wx:if="{{item.isSelected}}" type="success" color="#43bf92"></icon>
+        <icon bindtap="select" data-index='{{index}}' wx:else type='circle' color="#999"></icon>
+      </view>
+      <view class="left"><image src="{{item.photo[0]}}"></image></view>
+      <view class="right">
+        <view class="name">{{item.name}}</view>
+        <view class="value">¥{{item.value}}</view>
+      </view>
+    </view>
+    <view class="delete" bindtap="delete" data-index='{{index}}'>删除</view>
+    </view>
+  </block>
+  </view>
+<view class="v1"></view>
+</scroll-view>
+<view class="bottom">
+  <view class="upper">
+    <view class="pay">
+      <view class="small">选择商品</view>
+      <view class="small_o">¥{{totalvalue}}</view>
+    </view>
+    <view class="pay">
+      <view class="small">购物优惠</view>
+      <view class="small_o">¥0.00</view>
+    </view>
+  </view>
+  <view class="under">
+    <view class="realpay">
+      <view class="big">应付金额</view>
+      <view class="big_o">¥{{totalvalue}}</view>
+    </view>
+    <view class="buy" bindtap="pay">
+    <text>确认支付</text>
+    </view>
+  </view>
+</view>
